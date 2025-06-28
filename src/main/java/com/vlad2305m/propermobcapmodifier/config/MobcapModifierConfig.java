@@ -3,7 +3,7 @@ package com.vlad2305m.propermobcapmodifier.config;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
-import net.minecraft.entity.SpawnGroup;
+import net.minecraft.world.entity.MobCategory;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -28,8 +28,8 @@ public class MobcapModifierConfig implements ConfigData {
             despawnStartRange -- Radial distance from which mobs, after being there for 30s, have ⅛% chance to despawn each 1/20 second averaging at 40s/mob.
             immediateDespawnRange -- Radial distance from which mobs are forced to despawn. If they can. (not riding a boat|named|generated with structure|...)
             """)
-    private Map<String, SpawnGroupOptions> spawnGroups = Arrays.stream(SpawnGroup.values())
-            .collect(Collectors.toMap(SpawnGroup::getName, SpawnGroupOptions::from));
+    private Map<String, SpawnGroupOptions> spawnGroups = Arrays.stream(MobCategory.values())
+            .collect(Collectors.toMap(MobCategory::getName, SpawnGroupOptions::from));
 
     @SuppressWarnings({"TrailingWhitespaces", "unused"})
     @Comment("""

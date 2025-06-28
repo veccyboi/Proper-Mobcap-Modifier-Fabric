@@ -1,6 +1,6 @@
 package com.vlad2305m.propermobcapmodifier.config;
 
-import net.minecraft.entity.SpawnGroup;
+import net.minecraft.world.entity.MobCategory;
 
 public class SpawnGroupOptions {
     private int capacity = 0;
@@ -40,13 +40,13 @@ public class SpawnGroupOptions {
         return immediateDespawnRange;
     }
 
-    public static SpawnGroupOptions from(SpawnGroup spawnGroup) {
+    public static SpawnGroupOptions from(MobCategory spawnGroup) {
         return new SpawnGroupOptions(
-                spawnGroup.getCapacity(),
-                spawnGroup.isPeaceful(),
-                spawnGroup.isRare(),
-                spawnGroup.getDespawnStartRange(),
-                spawnGroup.getImmediateDespawnRange()
+                spawnGroup.getMaxInstancesPerChunk(),
+                spawnGroup.isFriendly(),
+                spawnGroup.isPersistent(),
+                spawnGroup.getNoDespawnDistance(),
+                spawnGroup.getDespawnDistance()
         );
     }
 }

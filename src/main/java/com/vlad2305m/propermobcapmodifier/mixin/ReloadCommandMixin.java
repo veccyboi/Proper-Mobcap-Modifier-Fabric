@@ -1,7 +1,7 @@
 package com.vlad2305m.propermobcapmodifier.mixin;
 
 import com.vlad2305m.propermobcapmodifier.config.ConfigManager;
-import net.minecraft.server.command.ReloadCommand;
+import net.minecraft.server.commands.ReloadCommand;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
